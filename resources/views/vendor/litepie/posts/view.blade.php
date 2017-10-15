@@ -65,7 +65,7 @@
 							</p>
 							@endif
 							<p>
-								Terima kasih telah meluangkan waktu membaca artikel-artikel dari <strong><a href="{{ URL('/') }}">litepie.com</a></strong>, Semoga bermanfaat. Jangan lupa untuk subscribe channel <strong><a href="https://www.youtube.com" target="_blank">Youtube</a></strong>, dan <strong><a href="https://www.facebook.com/litepieweb" target="_blank">Facebook</a></strong> serta Share content agar manfaatnya sampai kepada teman-teman lain.
+								Terima kasih telah meluangkan waktu membaca artikel-artikel dari <strong><a href="{{ URL('/') }}">{{ setting('site.title') }}</a></strong>, Semoga bermanfaat.
 							</p>
 							<p></p>
 						</div>

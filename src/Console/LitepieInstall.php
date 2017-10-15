@@ -12,8 +12,8 @@ use Ken\Blog\Traits\LiteSeed;
 class LitepieInstall extends Command
 {
     use Seedable, LiteSeed;
-    protected $seedersPath = 'vendor/tcg/voyager/publishable/database/seeds';
-    protected $litepieSeed = 'vendor/ken/laravel-voyager-blog/database/seeds';
+    protected $seedersPath = __DIR__ . '/../../../../tcg/voyager/publishable/database/seeds';
+    protected $litepieSeed = __DIR__ . '/../../database/seeds';
     /**
      * The name and signature of the console command.
      *
