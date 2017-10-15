@@ -58,6 +58,9 @@ class LitepieInstall extends Command
 
     public function handle(Filesystem $filesystem)
     {
+        $this->info('Installation Voyager Packages Admin');
+        $this->call('voyager:install');
+
         $this->info('Publishing example page to views');
         $this->exportExample();
 
@@ -116,9 +119,6 @@ class LitepieInstall extends Command
         $this->litepieSeed('LitepieSeeder');
 
         $this->info('Litepie Blog Installed successfully and Enjoy!.');
-
-        $this->info('Installation Voyager Packages Admin');
-        $this->call('voyager:install');
 
     }
 
