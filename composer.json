@@ -1,0 +1,41 @@
+{
+    "name": "ken/laravel-voyager-blog",
+    "description": "Create a blog very easy with litepie Blog & laravel voyager",
+    "type": "library",
+    "keywords": ["laravel", "litepie", "voyager"],
+    "license": "MIT",
+    "homepage": "https://litepie.com",
+    "support": {
+        "issues": "https://github.com/ken/laravel-voyager-blog/issues",
+        "source": "https://github.com/ken/laravel-voyager-blog"
+    },
+    "authors": [
+        {
+            "name": "ken",
+            "email": "wahyu.dhiraashandy8@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.4.0|~5.5.0",
+        "tcg/voyager": "^1.0",
+        "ken/blade-minify": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ken\\Blog\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ken\\Blog\\Tests\\": "tests/"
+      }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ken\\Blog\\LitepieServiceProvider"
+            ]
+        }
+    }
+}

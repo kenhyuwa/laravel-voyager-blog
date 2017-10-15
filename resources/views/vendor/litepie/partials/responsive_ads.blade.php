@@ -1,0 +1,1 @@
+{!! setting('quick-adsense.random_ads') !!}
