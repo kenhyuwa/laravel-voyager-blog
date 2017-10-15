@@ -99,6 +99,23 @@ class LitepieInstall extends Command
                 "Litepie::routes();"
             );
         }
+        if (file_exists(base_path('routes/web.php'))) {
+            $prefixAdmin = file_get_contents(base_path('routes/web.php'));
+            if ($prefixAdmin !== false) {
+                $prefixAdmin = str_replace(
+                    "admin", 
+                    (setting('admin.admin_prefix')) ? setting('admin.admin_prefix') : config('voyager.prefix'), 
+                    $prefixAdmin
+                );
+                file_put_contents(
+                    base_path('routes/web.php'),
+                     $prefixAdmin
+                 );
+            }
+        } else {
+            $this->warn('Unable to locate "routes/web.php".  Did you move this file?');
+            $this->warn('You need to update this manually.  Change ["prefix" => "admin"] to ["prefix" => "your/prefix-admin"] in routes/web.php');
+        }
 
         $this->info('Replace config from Voyager');
         $config = file_get_contents(base_path('config/voyager.php'));
