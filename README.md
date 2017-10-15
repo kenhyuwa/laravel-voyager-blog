@@ -68,7 +68,7 @@ APP_URL=http://localhost:8000
 
 and adding 
 ```
-LitepieWeb\Blog\LitepieServiceProvider::class,
+Ken\Blog\LitepieServiceProvider::class,
 ```
 
 ### 3. Automaticly Install Voyager
